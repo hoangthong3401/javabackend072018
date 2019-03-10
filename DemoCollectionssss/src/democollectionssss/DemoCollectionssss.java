@@ -1,25 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package democollectionssss;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-/**
- *
- * @author Admin
- */
 public class DemoCollectionssss {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
 
         List list = new ArrayList();
         list.add("aaaaa");
@@ -42,25 +29,19 @@ public class DemoCollectionssss {
 
         }
         System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-        for (Object obj : list) {
-            System.out.println(obj);
-        }
-        System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
         list.forEach((Object t) -> {
             System.out.println("a = " + t.toString());
-        } //list se lay ra tung phan tu trong mang, sau do goi accept chay và truyen vào phan tu do
-        //accept chay j, ntn la do de  viet
-        );
+        });
+        //list se lay ra tung phan tu trong mang, sau do goi accept chay và truyen vào phan tu do
         //danh dau cho lisst ( set...) chi nhan vao 1 kieu du lieu tuong ung
 
         List<String> strings = new ArrayList<>();
         strings.add("sdsadsad");
         strings.add("sdsadsad");
         strings.add("sdsadsad");
-        for (String string : strings) {
+        strings.forEach((string) -> {
             System.out.println(string);
-        }
-//        strings.add(45);
+        });//        strings.add(45);
 
     }
 
