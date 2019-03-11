@@ -3,7 +3,6 @@ package democollectionssss.thaotac;
 import democollectionssss.SinhVien;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class DemoThaoTac {
@@ -18,17 +17,10 @@ public class DemoThaoTac {
         list.add(new SinhVien(5, "abbbaa"));
         list.add(new SinhVien(4, "xxxx"));
 
-        Collections.sort(list, new Comparator<SinhVien>() {
-            @Override
-            public int compare(SinhVien o1, SinhVien o2) {
-                return o1.getTen().compareTo(o2.getTen());
-            }
-        });
+        Collections.sort(list, (SinhVien o1, SinhVien o2) -> o1.getTen().compareTo(o2.getTen()));
 
 //        Collections.
-        for (SinhVien sinhVien : list) {
-            System.out.println(sinhVien);
-        }
+        list.forEach(System.out::println);
     }
 
 }
