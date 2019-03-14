@@ -11,32 +11,19 @@ package demoenum;
  */
 public class ThoiGianXin {
 
-    private ThuTrongTuan thu;
+    private static Weekdays thu;
 
-    public ThuTrongTuan getThu() {
+    public Weekdays getThu() {
         return thu;
     }
 
-    public void setThu(ThuTrongTuan thu) {
-        this.thu = thu;
+    public static void setThu(Weekdays thu) {
+        ThoiGianXin.thu = thu;
     }
 
     public static void main(String[] args) {
         ThoiGianXin tgx = new ThoiGianXin();
-        tgx.setThu(ThuTrongTuan.THUBAY);
-        System.out.println(tgx.getThu().getMa());
-        tgx.setThu(ThuTrongTuan.CHU_NHAT);
-        System.out.println(tgx.getThu().getTenTiengViet());
-        tgx.getThu().inThongTin();
-        tgx.getThu().setMa(8);
-        tgx.getThu().inThongTin();
-//
-//        switch (tgx.getThu()) {
-//            case CHU_NHAT:
-//
-//                break;
-//            default:
-//                throw new AssertionError();
-//        }
+        ThoiGianXin.setThu(Weekdays.MON);
+        System.out.println("English name = " + thu.getName());
     }
 }

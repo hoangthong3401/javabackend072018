@@ -1,50 +1,31 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package demoenum;
 
-/**
- *
- * @author Admin
- */
-public enum ThuTrongTuan {
 
-    CHU_NHAT(0, "Chu nhat"), THUHAI(1, "thu hai"), THUBA(2), THUTU(3), THUNAM(4), THUSAU(5), THUBAY(6);
+public enum Weekdays {
+    MON(0, "Monday"), TUE(1, "Tuesday"), WED(2, "Wednesday"), THU(3, "Thursday"), FRI(4, "Friday"), SAT(5, "Saturday");
 
-    private int ma;
-    private String tenTiengViet;
-
-    private ThuTrongTuan(int ma) {
-        System.out.println("dang khoi tao obj Thu trong tuan, ma ==" + ma);
-        this.ma = ma;
+    private Weekdays(int index, String name) {
+        this.index = index;
+        this.name = name;
     }
 
-    private ThuTrongTuan(int ma, String tenTiengViet) {
-        this.ma = ma;
-        this.tenTiengViet = tenTiengViet;
+    private int index;
+    private String name;
+
+    public void setIndex(int index) {
+        this.index = index;
     }
 
-    public void setMa(int ma) {
-        this.ma = ma;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public int getMa() {
-        return ma;
+    public int getIndex() {
+        return index;
     }
 
-    public void setTenTiengViet(String tenTiengViet) {
-        this.tenTiengViet = tenTiengViet;
-    }
-
-    public String getTenTiengViet() {
-        return tenTiengViet;
-    }
-
-    
-    public void inThongTin(){
-    
-        System.out.println(ma+" - "+tenTiengViet);
+    public String getName() {
+        return name;
     }
 }
